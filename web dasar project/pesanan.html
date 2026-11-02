@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pesanan Saya - KantinKu</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="header"></header>
+  <main class="wrap">
+    <h1>Pesanan Saya</h1>
+    <p class="sub">Masukkan NIM untuk melihat status dan riwayat pesananmu.</p>
+    <div class="baris">
+      <input type="text" id="nim" placeholder="NIM">
+      <button onclick="cariPesanan()" style="flex:0 0 auto">Cari Pesanan</button>
+    </div>
+    <div id="hasil"></div>
+  </main>
+  <footer id="footer"></footer>
+  <script src="js/data.js"></script>
+  <script src="js/pesanan.js"></script>
+</body>
+</html>

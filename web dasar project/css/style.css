@@ -1,0 +1,69 @@
+/* KantinKu versi simpel - gaya tampilan */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; background: #fff7ed; color: #222; line-height: 1.5; }
+a { color: #c2410c; text-decoration: none; }
+.wrap { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+main.wrap { padding-top: 20px; padding-bottom: 60px; }
+h1 { font-size: 1.6rem; margin-bottom: 4px; }
+h2 { font-size: 1.2rem; margin-bottom: 10px; }
+.sub { color: #666; margin-bottom: 16px; }
+
+/* header */
+header { background: #f97316; }
+.bar { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; padding-top: 12px; padding-bottom: 12px; gap: 8px; }
+.logo { color: #fff; font-size: 1.3rem; font-weight: bold; }
+nav a { color: #ffedd5; margin-left: 14px; font-size: .95rem; }
+nav a.on, nav a:hover { color: #fff; text-decoration: underline; }
+
+/* komponen umum */
+.box { background: #fff; border-radius: 10px; padding: 16px; margin-bottom: 14px; box-shadow: 0 1px 4px rgba(0,0,0,.08); }
+.baris { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 14px; }
+.baris > * { flex: 1; min-width: 150px; }
+input, select, textarea { width: 100%; padding: 9px; border: 1px solid #bbb; border-radius: 6px; font-size: .95rem; font-family: inherit; }
+label { display: block; font-weight: bold; font-size: .9rem; margin: 10px 0 4px; }
+button { padding: 9px 16px; border: none; border-radius: 6px; background: #f97316; color: #fff; font-size: .95rem; cursor: pointer; }
+button:hover { background: #c2410c; }
+button.abu { background: #6b7280; }
+button.merah { background: #dc2626; }
+button.kecil { padding: 5px 10px; font-size: .82rem; }
+button:disabled { background: #ccc; cursor: not-allowed; }
+.pesan { padding: 10px 12px; border-radius: 6px; margin-bottom: 12px; }
+.pesan.sukses { background: #dcfce7; color: #166534; }
+.pesan.gagal { background: #fee2e2; color: #991b1b; }
+.kosong { text-align: center; color: #777; padding: 30px 0; }
+
+/* daftar menu */
+.daftar { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; }
+.kartu { background: #fff; border-radius: 10px; padding: 14px; text-align: center; box-shadow: 0 1px 4px rgba(0,0,0,.08); }
+.kartu .emoji { font-size: 3rem; }
+.kartu h3 { font-size: 1.05rem; margin: 4px 0; }
+.kartu .kat { font-size: .78rem; color: #888; }
+.kartu .desk { font-size: .85rem; color: #555; margin: 6px 0; min-height: 40px; }
+.kartu .harga { font-weight: bold; color: #c2410c; margin-bottom: 8px; }
+.kartu.habis { opacity: .55; }
+
+/* tabel */
+table { width: 100%; border-collapse: collapse; background: #fff; font-size: .92rem; }
+th, td { padding: 9px; border-bottom: 1px solid #e5e7eb; text-align: left; }
+th { background: #ffedd5; }
+.kanan { text-align: right; }
+.tabel-bungkus { overflow-x: auto; margin-bottom: 14px; }
+
+/* status */
+.status { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: .8rem; font-weight: bold; }
+.s-Menunggu { background: #fef3c7; color: #92400e; }
+.s-Diproses { background: #dbeafe; color: #1e40af; }
+.s-Siap { background: #dcfce7; color: #166534; }
+.s-Selesai { background: #e5e7eb; color: #374151; }
+.s-Dibatalkan { background: #fee2e2; color: #991b1b; }
+.pesanan-atas { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 6px; margin-bottom: 6px; }
+
+/* tab penjual */
+.tab { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+.tab button { background: #fff; color: #c2410c; border: 1px solid #f97316; }
+.tab button.aktif { background: #f97316; color: #fff; }
+.statistik { display: flex; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; }
+.statistik div { flex: 1; min-width: 130px; background: #fff; border-radius: 10px; padding: 12px; text-align: center; box-shadow: 0 1px 4px rgba(0,0,0,.08); }
+.statistik b { display: block; font-size: 1.6rem; color: #c2410c; }
+.login-box { max-width: 360px; margin: 30px auto; }
+footer { text-align: center; color: #777; font-size: .85rem; padding: 20px 0; }

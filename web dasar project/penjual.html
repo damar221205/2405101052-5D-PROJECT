@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Penjual - KantinKu</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="header"></header>
+  <main class="wrap">
+    <!-- form login penjual -->
+    <div id="halamanLogin" class="box login-box">
+      <h2>Login Penjual</h2>
+      <div id="pesanLogin"></div>
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Password penjual" onkeydown="if(event.key==='Enter') masuk()">
+      <p class="sub" style="margin-top:8px">Password demo: kantin123</p>
+      <button onclick="masuk()">Masuk</button>
+    </div>
+
+    <!-- dashboard penjual -->
+    <div id="halamanPenjual" style="display:none">
+      <div class="baris" style="justify-content:space-between">
+        <h1 style="flex:1">Dashboard Penjual</h1>
+        <button class="abu" style="flex:0 0 auto" onclick="keluar()">Keluar</button>
+      </div>
+      <div class="statistik" id="statistik"></div>
+      <div class="tab">
+        <button id="tab-pesanan" onclick="bukaTab('pesanan')">Pesanan Masuk</button>
+        <button id="tab-menu" onclick="bukaTab('menu')">Kelola Menu</button>
+        <button id="tab-riwayat" onclick="bukaTab('riwayat')">Riwayat</button>
+      </div>
+
+      <div id="isi-pesanan"></div>
+
+      <div id="isi-menu" style="display:none">
+        <div class="box">
+          <h2 id="judulForm">Tambah Menu</h2>
+          <input type="hidden" id="menuId">
+          <div class="baris">
+            <div><label>Nama menu</label><input id="mNama"></div>
+            <div><label>Kategori</label><input id="mKategori" list="listKategori" value="Makanan"></div>
+            <datalist id="listKategori"><option>Makanan</option><option>Minuman</option><option>Camilan</option></datalist>
+            <div><label>Harga (Rp)</label><input id="mHarga" type="number" min="500"></div>
+            <div><label>Emoji</label><input id="mEmoji" value="🍽️" maxlength="4"></div>
+          </div>
+          <label>Deskripsi</label><input id="mDeskripsi">
+          <label><input type="checkbox" id="mTersedia" checked style="width:auto"> Tersedia</label>
+          <div id="pesanMenu"></div>
+          <button onclick="simpanMenu()">Simpan</button>
+          <button class="abu" onclick="resetForm()">Batal</button>
+        </div>
+        <div class="tabel-bungkus" id="tabelMenu"></div>
+      </div>
+
+      <div id="isi-riwayat" style="display:none"></div>
+    </div>
+  </main>
+  <footer id="footer"></footer>
+  <script src="js/data.js"></script>
+  <script src="js/penjual.js"></script>
+</body>
+</html>

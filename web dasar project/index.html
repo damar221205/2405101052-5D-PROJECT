@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu - KantinKu</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="header"></header>
+  <main class="wrap">
+    <h1>Daftar Menu</h1>
+    <p class="sub">Pilih makanan dan minuman, lalu pesan tanpa antre. Tidak perlu login.</p>
+    <div class="baris">
+      <input type="text" id="cari" placeholder="Cari menu..." oninput="tampilMenu()">
+      <select id="kategori" onchange="tampilMenu()"></select>
+    </div>
+    <div class="daftar" id="daftar"></div>
+  </main>
+  <footer id="footer"></footer>
+  <script src="js/data.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>

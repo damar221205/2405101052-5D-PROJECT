@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keranjang - KantinKu</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="header"></header>
+  <main class="wrap">
+    <h1>Keranjang & Pemesanan</h1>
+    <p class="sub">Periksa pesanan, lalu isi nama dan NIM untuk memesan.</p>
+    <div id="hasil"></div>
+    <div id="isi"></div>
+    <div class="box" id="formPesan">
+      <h2>Data Pemesan</h2>
+      <label for="nama">Nama lengkap</label>
+      <input type="text" id="nama" placeholder="Nama sesuai KTM">
+      <label for="nim">NIM</label>
+      <input type="text" id="nim" placeholder="Contoh: 2405101052">
+      <label for="catatan">Catatan (opsional)</label>
+      <textarea id="catatan" rows="2" placeholder="Contoh: tidak pakai pedas"></textarea>
+      <p class="sub" style="margin-top:10px">Pembayaran dilakukan langsung di kantin saat mengambil pesanan.</p>
+      <button onclick="buatPesanan()">Pesan Sekarang</button>
+    </div>
+  </main>
+  <footer id="footer"></footer>
+  <script src="js/data.js"></script>
+  <script src="js/keranjang.js"></script>
+</body>
+</html>
