@@ -64,13 +64,23 @@ kantinku-simpel/
 
 ## Petunjuk Menjalankan Aplikasi
 
-1. Clone atau unduh repository ini, lalu ekstrak jika berbentuk zip.
-2. Pastikan susunan folder tidak berubah (`css/` dan `js/` sejajar dengan file `.html`).
-3. Jalankan salah satu cara berikut:
-   - **Langsung:** buka `index.html` dengan Chrome atau Edge.
-   - **VS Code:** klik kanan `index.html`, pilih **Open with Live Server**.
-   - **Python:** jalankan `python -m http.server 8000` di folder proyek, lalu buka `http://localhost:8000`.
+Buka `index.html` di browser. Aplikasi dipakai oleh dua jenis pengguna: pembeli (tanpa login) dan penjual.
 
-**Akses penjual:** buka menu **Penjual**, lalu masukkan password `kantin123`.
+### A. Alur Pembeli (mahasiswa)
 
-**Catatan:** data tersimpan di browser yang digunakan. Untuk mereset data, buka DevTools (F12) → Application → Clear site data.
+1. **Lihat menu.** Halaman utama menampilkan daftar makanan dan minuman. Gunakan kolom pencarian atau filter kategori untuk menemukan menu.
+2. **Tambah ke keranjang.** Klik tombol **+ Keranjang** pada menu yang diinginkan. Menu berstatus *Habis* tidak dapat dipilih. Jumlah item muncul pada menu **Keranjang** di bagian atas.
+3. **Periksa keranjang.** Buka menu **Keranjang**. Ubah jumlah dengan tombol **−** dan **+**, atau klik **Hapus** untuk membuang menu. Total harga dihitung otomatis.
+4. **Isi data pemesan.** Masukkan **nama lengkap** dan **NIM** (angka 8–20 digit). Catatan pesanan boleh dikosongkan.
+5. **Pesan.** Klik **Pesan Sekarang**. Nomor pesanan (contoh: `KK-001`) akan tampil sebagai tanda pesanan berhasil.
+6. **Pantau status.** Buka menu **Pesanan Saya**, masukkan NIM, lalu klik **Cari Pesanan**. Status diperbarui otomatis dan semua riwayat pesanan tampil di halaman yang sama.
+7. **Ambil pesanan.** Saat status berubah menjadi **Siap Diambil**, ambil pesanan di kantin dan bayar langsung.
+
+### B. Alur Penjual
+
+1. **Login.** Buka menu **Penjual**, masukkan password `kantin123`, lalu klik **Masuk**.
+2. **Pantau ringkasan.** Dashboard menampilkan jumlah pesanan masuk, sedang diproses, dan selesai.
+3. **Proses pesanan** (tab **Pesanan Masuk**). Lihat detail pesanan (nama, NIM, menu, jumlah, catatan), lalu ubah statusnya lewat dropdown: *Menunggu → Diproses → Siap Diambil → Selesai*. Pesanan juga dapat dibatalkan.
+4. **Kelola menu** (tab **Kelola Menu**). Isi form untuk menambah menu baru. Gunakan tombol **Edit**, **Hapus**, atau **Tandai Habis / Tandai Ada** pada tabel menu.
+5. **Lihat riwayat** (tab **Riwayat**). Pesanan berstatus Selesai atau Dibatalkan tampil di sini beserta total pendapatan. Hapus satu riwayat dengan tombol **Hapus**, atau semuanya dengan **Hapus Semua Riwayat**.
+6. **Logout.** Klik **Keluar** di pojok kanan atas dashboard.
